@@ -4,7 +4,7 @@ import { Box, Tabs, Tab, Typography, Button } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardActionArea from "@mui/material/CardActionArea";
-import "../../globals.css";
+// import '.././globals.css'
 const cards = [
   {
     id: 1,
@@ -100,7 +100,7 @@ const VerticalTabs = () => {
           </Box>
           <Box className="tab-paneltext-cards">
             {cards.map((card, index) => (
-              <Card>
+              <Card key={index}>
                 <CardActionArea
                   onClick={() => setSelectedCard(index)}
                   data-active={selectedCard === index ? "" : undefined}
